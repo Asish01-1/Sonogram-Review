@@ -1,19 +1,3 @@
-"""
-Non-interactive inference script, called by the Node.js backend.
-
-Usage:
-    python3 predict.py <image_path> '<answers_json>'
-
-<answers_json> is a JSON array of 10 booleans, one per clinical question,
-in the same order as CLINICAL_QUESTIONS below.
-
-Prints a single JSON object to stdout (and nothing else) so the Node
-server can parse it directly.
-
-*** DISCLAIMER ***
-The clinical weights below are illustrative, not clinically validated.
-This is a prototype/educational tool, not a diagnostic system.
-"""
 
 import sys
 import json
@@ -22,10 +6,6 @@ import torch.nn as nn
 from torchvision import transforms
 from PIL import Image
 
-
-# --------------------------------------------------------------------------
-# EDIT THESE
-# --------------------------------------------------------------------------
 CHECKPOINT_PATH = r"D:\Downloads\ultrasound-app\ultrasound-app\backend\models\best_dinov2_classifier.pt"
 BACKBONE_NAME = "dinov2_vits14"
 CLASS_NAMES = ["benign", "malignant", "normal"]
