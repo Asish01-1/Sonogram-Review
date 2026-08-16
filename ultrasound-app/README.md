@@ -1,4 +1,7 @@
 # Sonogram Review — AI-Assisted Ultrasound Screening
+We are working on batch processing and a production level MLOPS app to implement in real health care 🚀.
+Greetings from Asish.
+Thank You For visiting my profile 😊.
 
 A three-part app: React frontend, Node/Express backend, Python (PyTorch)
 inference script that loads your already-trained DINOv2 checkpoint.
