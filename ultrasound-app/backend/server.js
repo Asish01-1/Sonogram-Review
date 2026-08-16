@@ -1,6 +1,3 @@
-// backend/server.js
-// Express server: accepts an ultrasound image + clinical questionnaire
-// answers, calls the Python inference script, returns the combined report.
 
 const express = require("express");
 const multer = require("multer");
@@ -73,7 +70,7 @@ app.post("/api/predict", upload.single("image"), (req, res) => {
   py.stderr.on("data", (data) => (stderr += data.toString()));
 
   py.on("close", (code) => {
-    // Clean up uploaded file regardless of outcome
+ 
     fs.unlink(imagePath, () => {});
 
     if (code !== 0) {
